@@ -1,0 +1,17 @@
+# Language-agnostic by design. Add project-specific ignores during
+# commissioning (WORKFLOW.md §9), not here.
+
+# Secrets — AGENTS.md Conventions: no secrets in the repo.
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / tools
+.vscode/
+.idea/
+*.swp
