@@ -43,7 +43,7 @@ be ticked after one agent product when §9 requires two.
   listed above.
 
 ## Plan                 <!-- human edits; agents propose via log -->
-- [ ] task 1 — §9: move Commands to step 2; reword §9.9 to confirm
+- [x] task 1 — §9: move Commands to step 2; reword §9.9 to confirm
 - [ ] task 2 — §9: add the rule on where commissioning notes may live
 - [ ] task 3 — add refusal test D to §9 between steps 4 and 5, extend
       §10's drill and docs/assurance-log.md's columns from A–C to A–D
@@ -55,3 +55,25 @@ be ticked after one agent product when §9 requires two.
 - [ ] task 7 — §2: add tests/ to the skeleton
 
 ## Session log          <!-- agents append; human may annotate -->
+### 2026-09-25 — session 1
+Agent/tool: Claude Code (Opus 5)
+Did: task 1. WORKFLOW.md §9 only. Filling the AGENTS.md Commands block
+is now step 2, before any implementation step, with a one-line reason
+(§5 makes an empty block unverifiable from the first task) and a note
+that a provisional value is fine. The old step 9 is now step 10 and
+confirms the block against what commissioning ran rather than filling
+it. Steps 2–8 of the old list shifted down one; no other file changed.
+Checks run: none — AGENTS.md's Commands block is empty (install/test/
+lint unset) in this markdown-only repo, so there is nothing to run.
+No test written: the change is prose in a specification document with
+no executable behaviour (§5's docs-only case). Verified by reading:
+§9's step numbering is contiguous 1–10, and no other text in the repo
+cites a §9 step number (grep for "§9" and "step N" — only §10 and §13
+reference §9, both by test letter, which task 3 updates).
+Left: tasks 2–7. Note for the human, not a plan change: this task's
+insertion renumbers §9's final item from 9 to 10, so the Done-when
+line reading "§9.9 confirms that block" now points at §9.10. The Plan
+task's wording ("move Commands to step 2") was followed literally.
+Task 3's "between steps 4 and 5" reads, under the new numbering, as
+between refusal test A and the first implementation session.
+PROPOSAL (if any): none.

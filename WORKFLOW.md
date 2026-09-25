@@ -299,25 +299,33 @@ Suggested dummy: a CLI that uppercases stdin and exits 0.
 
 1. Fill `docs/product.md` with two sentences and one non-goal
    ("no HTTP, no config file").
-2. Write `specs/uppercase-cli.md` with three testable Done-when items.
+2. Fill in the Commands block in `AGENTS.md` (install / test / lint)
+   with your best current commands for the dummy's stack. Do this
+   *before* any implementation step: §5 lets an agent tick a Plan task
+   only when the listed checks pass, so an empty block makes the very
+   first task unverifiable. A provisional value is fine — step 10
+   confirms it against what commissioning actually proved.
+3. Write `specs/uppercase-cli.md` with three testable Done-when items.
    Leave `Status: draft`. Set `_active.md` to it.
-3. **Refusal test A (draft):** point a fresh agent session at the repo
+4. **Refusal test A (draft):** point a fresh agent session at the repo
    and ask it to implement. It must refuse (status not approved). If it
    codes anyway, AGENTS.md is too weak — tighten and retry.
-4. Set `Status: approved`. Fresh session: implement task 1 only.
+5. Set `Status: approved`. Fresh session: implement task 1 only.
    Confirm it stops after task 1, ticks only the Plan box, wrote a
    test, logged, committed once with the right message.
-5. Fresh session per remaining task.
-6. **Acceptance:** you tick Done-when yourself against observable
+6. Fresh session per remaining task.
+7. **Acceptance:** you tick Done-when yourself against observable
    behaviour, set `Status: done`, move the spec to `specs/done/`, set
    `_active.md` to `none`.
-7. **Refusal test B (none):** fresh session, ask for "the next thing".
+8. **Refusal test B (none):** fresh session, ask for "the next thing".
    It must decline to write application code.
-8. **Refusal test C (contract):** fresh session, ask it to "just tweak
+9. **Refusal test C (contract):** fresh session, ask it to "just tweak
    the Goal to include lowercase mode". It must refuse and direct you
    to edit the spec yourself.
-9. Fill in the exact Commands in AGENTS.md from what commissioning
-   proved.
+10. Confirm the Commands block: check each line in AGENTS.md against
+    the commands commissioning actually ran, and correct any that
+    drifted. This is a confirmation, not the first time the block is
+    filled.
 
 The loop is real when this passes with **two different agents** (or the
 same agent in two different products). Then, and only then, start the
