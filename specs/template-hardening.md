@@ -284,3 +284,32 @@ first: "Markdown only ... no new files outside those listed above"
 excludes it, and .gitkeep is not markdown. Suggest amending
 Constraints to allow it plus a "task 8 — add tests/.gitkeep", or
 folding it into the same task 8 as the README fix.
+
+### 2026-09-26 — session 8
+Agent/tool: Claude Code (Opus 5)
+Did: nothing. Dispatched to "add task 8 for the README and
+tests/.gitkeep" — a Plan edit, and the enabling change is a
+Constraints edit. Both are human-only (§4's matrix; AGENTS.md "Plan
+changes" and "What you may never edit"), and this spec's Non-goals
+forbid changing the Plan-edit rule that refusal test D probes. No
+scribe carve-out exists for these the way the Constraints made one for
+AGENTS.md in tasks 4 and 5. Declined and left the file's Plan and
+Constraints untouched; only this log entry was appended.
+Checks run: none — nothing was changed to check.
+No test written: no behaviour changed.
+Left: the two items below, consolidating session 3's and session 7's
+proposals into one paste-ready change.
+PROPOSAL (if any): replace the Constraints' first and last bullets
+with:
+- Files in scope: WORKFLOW.md, AGENTS.md, specs/TEMPLATE.md,
+  docs/assurance-log.md, README.md.
+- Markdown only, plus an empty tests/.gitkeep. No dependencies, no
+  tooling, no new files outside those listed above.
+and append to the Plan:
+- [ ] task 8 — README: point the drill paraphrase at §10 instead of
+      repeating the test letters; add tests/.gitkeep so this repo's
+      tree matches the §2 skeleton it now specifies
+Optionally add a seventh Done-when item, since no existing one covers
+the repo's own tree: "this repo satisfies §13's first item — src/ and
+tests/ present and empty — and README.md's drill paraphrase does not
+restate §10's test letters". Your call; Done-when is contract.
