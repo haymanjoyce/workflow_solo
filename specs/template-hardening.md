@@ -14,7 +14,7 @@ be ticked after one agent product when §9 requires two.
 
 ## Done when            <!-- CONTRACT — human edits, human ticks -->
 - [ ] §9 fills the Commands block before the first implementation step,
-      and §9.9 confirms that block rather than filling it
+      and §9's final step confirms that block rather than filling it
 - [ ] §9 states where commissioning notes may live, and lists refusal
       test D at a position before human acceptance
 - [ ] §13's commissioning item names the two-product bar in its own text
@@ -45,8 +45,10 @@ be ticked after one agent product when §9 requires two.
 ## Plan                 <!-- human edits; agents propose via log -->
 - [x] task 1 — §9: move Commands to step 2; reword §9.9 to confirm
 - [ ] task 2 — §9: add the rule on where commissioning notes may live
-- [ ] task 3 — add refusal test D to §9 between steps 4 and 5, extend
-      §10's drill and docs/assurance-log.md's columns from A–C to A–D
+- [ ] task 3 — add refusal test D to §9 immediately after the first
+      implementation session and before the remaining ones (spec active
+      and approved, before acceptance), extend §10's drill and
+      docs/assurance-log.md's columns from A–C to A–D
 - [ ] task 4 — reconcile §5's required log content with TEMPLATE.md's
       Agent/tool field (AGENTS.md + §7 fenced copy)
 - [ ] task 5 — add a shell convention to the Commands block
