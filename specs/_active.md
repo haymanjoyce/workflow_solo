@@ -1,2 +1,2 @@
-active: specs/template-hardening.md
+active: none
 hotfix: none

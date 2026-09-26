@@ -1,6 +1,6 @@
 # Spec: template-hardening
 
-Status: approved
+Status: done
 Created: 2026-09-25
 
 ## Goal
@@ -13,16 +13,16 @@ cost run 1 its blind results on tests A and B; and §13's checklist can
 be ticked after one agent product when §9 requires two.
 
 ## Done when            <!-- CONTRACT — human edits, human ticks -->
-- [ ] §9 fills the Commands block before the first implementation step,
+- [x] §9 fills the Commands block before the first implementation step,
       and §9's final step confirms that block rather than filling it
-- [ ] §9 states where commissioning notes may live, and lists refusal
+- [x] §9 states where commissioning notes may live, and lists refusal
       test D at a position before human acceptance
-- [ ] §13's commissioning item names the two-product bar in its own text
-- [ ] AGENTS.md's Commands block states the shell its values assume,
+- [x] §13's commissioning item names the two-product bar in its own text
+- [x] AGENTS.md's Commands block states the shell its values assume,
       and §5's required log content matches specs/TEMPLATE.md's fields
-- [ ] §2's skeleton includes tests/
-- [ ] AGENTS.md and WORKFLOW.md §7's fenced copy are byte-identical
-- [ ] this repo satisfies §13's first item — src/ and tests/ present
+- [x] §2's skeleton includes tests/
+- [x] AGENTS.md and WORKFLOW.md §7's fenced copy are byte-identical
+- [x] this repo satisfies §13's first item — src/ and tests/ present
       and empty — and README.md's drill paraphrase does not restate
       §10's test letters
 
@@ -372,3 +372,49 @@ existing src/ has always had the same shape, so the convention is
 established and I left it; say the word if you want §13 to read
 "empty but for .gitkeep".
 PROPOSAL (if any): none.
+
+### 2026-09-26 — session 10 (close-out, §12)
+Agent/tool: Claude Code (Opus 5)
+Scribe authorisation: the human ticked all seven Done-when boxes
+themselves (§12 step 1, and the one thing no authorisation covers),
+then chose "Scribe it; _active: none" from the close-out options,
+authorising this session to apply §12 step 2 on their behalf. Third
+per-session scribe authorisation on this spec, after sessions 4 and 5
+(AGENTS.md) and session 9 (Plan and Constraints).
+Did: §12 step 2 only. No task work — the Plan was complete.
+`Status: approved` → `done`; this file moved to `specs/done/`;
+`_active.md` set to `none`.
+Step 3 (promotion) was assessed and promoted nothing, deliberately:
+- The Commands block stays unset. This repo is the template, and
+  downstream repos copy AGENTS.md verbatim, so filling in this repo's
+  own shell/install/test/lint would ship them into every project made
+  from it. Not a durable command in the §12 sense.
+- §5's docs-only case, which every session here cited, is already in
+  WORKFLOW.md at §5 item 2. Nothing to promote.
+- docs/product.md is still the template placeholder, so AGENTS.md's
+  third source of truth is empty for this repo. Pre-existing, not
+  created by this spec, and human-edit-only. Flagged, untouched.
+Checks run: none — AGENTS.md's Commands block has no values
+(shell/install/test/lint unset) in this markdown-only repo, so there
+is nothing to run.
+No test written: a status field, a file move and a pointer, no
+executable behaviour (§5's docs-only case).
+Left: nothing on this spec. Next is §9's second-product commissioning
+pass, which is not a spec and needs no active slot; §13's
+commissioning item stays unticked until it passes.
+PROPOSAL (if any): the scribe convention needs a home outside this
+spec before §12 step 3 is honestly satisfied. It was invented as a
+Constraints bullet here, used three times, and widened in session 9
+from AGENTS.md to the Plan and Constraints — and `grep -rn scribe`
+across the repo returns hits in this file and nowhere else. Once this
+file is in specs/done/, the rule survives only as finished work, which
+§12 step 3 forbids ("nothing durable stays only in a done spec"). It
+could not be promoted here: writing it into AGENTS.md changes the
+force of the contract-edit and Plan-edit lines, which this spec's
+Non-goals protect so run 1's evidence stays valid. Suggest its own
+spec, with the sequencing decided first — a scribe carve-out in
+AGENTS.md is a rule run 2 would then be testing, so it lands either
+before run 2 or after it, not during. My preference is after: run 2
+closes §9's two-product bar against the rules run 1 tested, and the
+carve-out is then commissioned in its own right rather than riding in
+untested.
