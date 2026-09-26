@@ -43,6 +43,7 @@ my-project/
     _active.md         # pointer to the spec in play, or "none"
     done/              # completed specs move here
   src/                 # empty until the first approved task
+  tests/               # likewise; §5 requires a test per task
 ```
 
 No plugins, no second chat product, no vendor rule files at day zero.
@@ -412,7 +413,8 @@ further feature work.
 Anyone (human or AI) building this workflow from this document is done
 when:
 
-- [ ] Repo skeleton of §2 exists, `src/` empty, `_active.md` = `none`
+- [ ] Repo skeleton of §2 exists, `src/` and `tests/` empty,
+      `_active.md` = `none`
 - [ ] `AGENTS.md` matches §7 verbatim
 - [ ] Both templates of §8 present
 - [ ] `docs/product.md` drafted (two sentences + one non-goal is enough

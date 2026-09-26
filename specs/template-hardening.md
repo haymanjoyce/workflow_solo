@@ -54,7 +54,7 @@ be ticked after one agent product when §9 requires two.
 - [x] task 5 — add a shell convention to the Commands block
       (AGENTS.md + §7 fenced copy)
 - [x] task 6 — §13: make the two-product bar explicit in the item
-- [ ] task 7 — §2: add tests/ to the skeleton
+- [x] task 7 — §2: add tests/ to the skeleton
 
 ## Session log          <!-- agents append; human may annotate -->
 ### 2026-09-25 — session 1
@@ -246,3 +246,41 @@ entry one". Two commissioning passes produce two entries. The line is
 not wrong — the first pass is still entry one — so I left it; say if
 you want it to read "an entry per pass".
 PROPOSAL (if any): none.
+
+### 2026-09-26 — session 7
+Agent/tool: Claude Code (Opus 5)
+Did: task 7, the last Plan task. WORKFLOW.md only.
+- §2's day-zero skeleton gains `tests/` below `src/`, commented
+  "likewise; §5 requires a test per task" — §5 makes a test the
+  condition of every tick and §4's matrix already grants agents edit
+  rights over tests, so the directory was assumed everywhere but
+  never listed.
+- §13's first checklist item now reads "`src/` and `tests/` empty",
+  since the skeleton it checks has two empty directories now. Not
+  named in the Plan task; this task is what made the item partial.
+Checks run: none — AGENTS.md's Commands block has no values
+(shell/install/test/lint unset) in this markdown-only repo, so there
+is nothing to run.
+No test written: prose in a specification document, no executable
+behaviour (§5's docs-only case). Verified by reading: the skeleton's
+comment column still aligns; `diff` and `cmp` of AGENTS.md against
+§7's fenced copy extracted from WORKFLOW.md both report no
+difference, which is Done-when item 6.
+Noted, not changed: §4's matrix row reads "`src/`, tests" — correct,
+but now that §2 names the directory it could read "`tests/`". Cosmetic
+only, so left alone.
+Left: nothing in the Plan — tasks 1–7 are all ticked. Two things are
+outside it and yours to decide: (a) the README drift from session 3,
+still unfixed, README.md being out of this spec's files-in-scope;
+(b) this repo's own tree has no `tests/` (it uses .gitkeep for empty
+directories — `src/.gitkeep`, `specs/done/.gitkeep`), so as of this
+commit the template no longer satisfies its own §13 item 1. See the
+proposal. Done-when is yours to tick; all six items look met to me,
+but that judgement is acceptance and not mine to make.
+PROPOSAL (if any): add `tests/.gitkeep` to this repo, so the template
+matches the §2 skeleton it now specifies and the next commissioning
+run's Phase 0 skeleton check passes. It needs a Constraints amendment
+first: "Markdown only ... no new files outside those listed above"
+excludes it, and .gitkeep is not markdown. Suggest amending
+Constraints to allow it plus a "task 8 — add tests/.gitkeep", or
+folding it into the same task 8 as the README fix.
