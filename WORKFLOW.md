@@ -112,8 +112,11 @@ are true:
 2. The task's behaviour is covered by a test the agent wrote or updated
    in that session. If a task genuinely has no testable behaviour
    (e.g. docs-only), the Session log must say so explicitly.
-3. A Session log entry exists for the session (what changed, commands
-   run, leftovers, any plan-change proposals).
+3. A Session log entry exists for the session, carrying every field of
+   `specs/TEMPLATE.md`'s log block: agent/tool, what changed, checks
+   run, what is left, any plan-change proposal. The agent/tool line is
+   what lets a later reader attribute a result to a model; §10's drill
+   depends on it.
 
 The human's review is a diff review **plus** a glance at the Session log
 claims — not a chat transcript. Diffs look plausible more often than
@@ -199,8 +202,9 @@ You may tick a Plan task checkbox only when ALL of:
 - the Commands checks below pass (record the exact commands run);
 - the behaviour is covered by a test you wrote or updated this session
   (or the log states explicitly why none applies);
-- you have appended a Session log entry: what changed, commands run,
-  leftovers, proposals.
+- you have appended a Session log entry with every field of
+  specs/TEMPLATE.md's log block: agent/tool, what changed, commands
+  run, leftovers, proposals.
 Then commit per the Git rules below.
 
 ## Git rules

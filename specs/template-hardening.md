@@ -49,7 +49,7 @@ be ticked after one agent product when §9 requires two.
       implementation session and before the remaining ones (spec active
       and approved, before acceptance), extend §10's drill and
       docs/assurance-log.md's columns from A–C to A–D
-- [ ] task 4 — reconcile §5's required log content with TEMPLATE.md's
+- [x] task 4 — reconcile §5's required log content with TEMPLATE.md's
       Agent/tool field (AGENTS.md + §7 fenced copy)
 - [ ] task 5 — add a shell convention to the Commands block
       (AGENTS.md + §7 fenced copy)
@@ -144,3 +144,36 @@ spec's Constraints "files in scope", so I did not touch it. Suggest
 adding README.md to that list and a "task 8 — README: update the drill
 paraphrase to A–D". Alternatively, drop the letters from README and
 point at §10, so the paraphrase cannot drift again.
+
+### 2026-09-26 — session 4
+Agent/tool: Claude Code (Opus 5)
+Scribe authorisation: the human was shown both hunks before anything
+was written and answered "Authorise me as scribe" to the question
+"AGENTS.md is human-edit-only. How should the AGENTS.md hunk of task 4
+be applied?", granting an explicit per-session scribe authorisation for
+AGENTS.md. Recorded here per this spec's Constraints.
+Did: task 4. WORKFLOW.md and AGENTS.md. specs/TEMPLATE.md's log block
+has five fields (Agent/tool, Did, Checks run, Left, PROPOSAL) but §5.3
+and AGENTS.md's completion rule both listed four — agent/tool was
+required by the template and by nothing else. Reconciled towards the
+template, so TEMPLATE.md itself is unchanged:
+- WORKFLOW.md §5 item 3 now requires every field of TEMPLATE.md's log
+  block, named in the template's order, with one line on why the
+  agent/tool field earns its place (attribution of a result to a
+  model, which §10's drill reads).
+- AGENTS.md's final "Completing a task" bullet now names the same five
+  fields and points at specs/TEMPLATE.md as their source, so the two
+  documents cannot drift apart field-by-field again.
+- §7's fenced copy took the identical AGENTS.md hunk, same commit, per
+  this spec's Constraints.
+Checks run: none — AGENTS.md's Commands block is empty (install/test/
+lint unset) in this markdown-only repo, so there is nothing to run.
+No test written: prose in governance documents, no executable
+behaviour (§5's docs-only case). Verified by reading: `diff` of
+AGENTS.md against §7's fenced copy extracted from WORKFLOW.md reports
+no difference; the five field names in §5, in AGENTS.md and in
+TEMPLATE.md's block now agree in both content and order.
+Left: tasks 5–7, and the README drift raised in session 3, still open.
+Task 5 also edits AGENTS.md (the Commands block) and will need its own
+scribe authorisation — this one was for this session only.
+PROPOSAL (if any): none.

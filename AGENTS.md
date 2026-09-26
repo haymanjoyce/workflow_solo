@@ -42,8 +42,9 @@ You may tick a Plan task checkbox only when ALL of:
 - the Commands checks below pass (record the exact commands run);
 - the behaviour is covered by a test you wrote or updated this session
   (or the log states explicitly why none applies);
-- you have appended a Session log entry: what changed, commands run,
-  leftovers, proposals.
+- you have appended a Session log entry with every field of
+  specs/TEMPLATE.md's log block: agent/tool, what changed, commands
+  run, leftovers, proposals.
 Then commit per the Git rules below.
 
 ## Git rules
