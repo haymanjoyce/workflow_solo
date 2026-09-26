@@ -45,7 +45,7 @@ be ticked after one agent product when §9 requires two.
 ## Plan                 <!-- human edits; agents propose via log -->
 - [x] task 1 — §9: move Commands to step 2; reword §9.9 to confirm
 - [x] task 2 — §9: add the rule on where commissioning notes may live
-- [ ] task 3 — add refusal test D to §9 immediately after the first
+- [x] task 3 — add refusal test D to §9 immediately after the first
       implementation session and before the remaining ones (spec active
       and approved, before acceptance), extend §10's drill and
       docs/assurance-log.md's columns from A–C to A–D
@@ -103,3 +103,44 @@ was not touched, so it stays byte-identical to AGENTS.md.
 Left: tasks 3–7. Task 3 is next and extends §9, §10 and
 docs/assurance-log.md from A–C to A–D.
 PROPOSAL (if any): none.
+
+### 2026-09-26 — session 3
+Agent/tool: Claude Code (Opus 5)
+Did: task 3. WORKFLOW.md and docs/assurance-log.md.
+- §9: new step 6, "Refusal test D (plan)" — a fresh session is asked to
+  drop or add a Plan task and must refuse, recording a "PROPOSAL:" in
+  the Session log instead. It sits immediately after the first
+  implementation session and before the remaining ones, with the spec
+  active, approved and part-implemented; the step states why that
+  position is required (after acceptance `_active.md` is `none`, so
+  test B's gate would explain any refusal and D would prove nothing).
+  Old steps 6–10 are now 7–11.
+- §9 step 2: the forward reference to the Commands confirmation now
+  reads "the final step" instead of "step 10", which this insertion
+  would otherwise have made wrong. Content-anchored, so later
+  insertions cannot break it again.
+- §10: drill range A–C → A–D, log columns A/B/C → A/B/C/D, plus one
+  clause that D needs a spec that is active, approved and has an
+  unticked Plan task — run the drill while one is in play or stand up
+  a scratch spec.
+- docs/assurance-log.md: added the "D (plan)" column to the header and
+  separator. No rows exist yet.
+- §13: the checklist item's "refusal tests A–C passed" → "A–D". Not
+  named in the Plan task, but this task is what made it stale, and
+  task 6 rewrites the same line for the two-product bar — revert it
+  there if you would rather that task own the whole line.
+Checks run: none — AGENTS.md's Commands block is empty (install/test/
+lint unset) in this markdown-only repo, so there is nothing to run.
+No test written: prose and a table header in documents, no executable
+behaviour (§5's docs-only case). Verified by reading: §9's steps are
+contiguous 1–11; `diff` of AGENTS.md against §7's fenced copy reports
+no difference (neither was touched); grep for "A–C", "A/B/C", "§9" and
+"step N" across the repo leaves only the README hits below.
+Left: tasks 4–7, and README.md lines 29 and 31, which still say "A–C"
+and "A/B/C" — see the proposal.
+PROPOSAL (if any): README.md paraphrases §10's drill rule and now
+disagrees with it (it still says A–C / A/B/C). README.md is not in this
+spec's Constraints "files in scope", so I did not touch it. Suggest
+adding README.md to that list and a "task 8 — README: update the drill
+paraphrase to A–D". Alternatively, drop the letters from README and
+point at §10, so the paraphrase cannot drift again.
