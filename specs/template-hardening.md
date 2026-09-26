@@ -53,7 +53,7 @@ be ticked after one agent product when §9 requires two.
       Agent/tool field (AGENTS.md + §7 fenced copy)
 - [x] task 5 — add a shell convention to the Commands block
       (AGENTS.md + §7 fenced copy)
-- [ ] task 6 — §13: make the two-product bar explicit in the item
+- [x] task 6 — §13: make the two-product bar explicit in the item
 - [ ] task 7 — §2: add tests/ to the skeleton
 
 ## Session log          <!-- agents append; human may annotate -->
@@ -217,4 +217,32 @@ across the repo leaves no stale list.
 Left: tasks 6 and 7, and the README drift raised in session 3, still
 open. Task 6 (§13's two-product bar) and task 7 (§2's skeleton) touch
 WORKFLOW.md only, so neither needs a scribe authorisation.
+PROPOSAL (if any): none.
+
+### 2026-09-26 — session 6
+Agent/tool: Claude Code (Opus 5)
+Did: task 6. WORKFLOW.md §13 only. The commissioning checklist item
+now carries the two-product bar in its own text: commissioning is
+"completed **twice** — the whole loop ... run through by two different
+agents (or the same agent in two different products), per §9's closing
+rule. One pass is half the bar: do not tick this on one". Before, the
+item said only that §9 was completed, so it read as tickable after a
+single pass while §9's closing line required two; a reader who ticked
+from the checklist alone never met §9. The parenthetical is worded
+verbatim from §9's closing line so the two cannot be read as different
+bars. No other file changed; the item stays unticked.
+Checks run: none — AGENTS.md's Commands block has no values
+(shell/install/test/lint unset) in this markdown-only repo, so there
+is nothing to run.
+No test written: prose in a specification document, no executable
+behaviour (§5's docs-only case). Verified by reading: §13's remaining
+items are unchanged and the item's "two different agents (or the same
+agent in two different products)" matches §9's closing line word for
+word (grep "two different agents" returns exactly those two places).
+Left: task 7, and the README drift raised in session 3, still open.
+Also noted, not changed: §13's next item still says
+`docs/assurance-log.md` is created "with the commissioning drill as
+entry one". Two commissioning passes produce two entries. The line is
+not wrong — the first pass is still entry one — so I left it; say if
+you want it to read "an entry per pass".
 PROPOSAL (if any): none.

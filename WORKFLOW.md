@@ -417,8 +417,11 @@ when:
 - [ ] Both templates of §8 present
 - [ ] `docs/product.md` drafted (two sentences + one non-goal is enough
       to start)
-- [ ] Commissioning of §9 completed, including refusal tests A–D passed
-      and Commands filled in
+- [ ] Commissioning of §9 completed **twice** — the whole loop, with
+      refusal tests A–D passed and the Commands block filled in, run
+      through by two different agents (or the same agent in two
+      different products), per §9's closing rule. One pass is half the
+      bar: do not tick this on one
 - [ ] `docs/assurance-log.md` created with the commissioning drill as
       entry one
 - [ ] The dummy spec sits in `specs/done/` and a fresh agent session,
