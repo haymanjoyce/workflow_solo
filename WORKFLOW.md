@@ -297,6 +297,17 @@ the whole loop and the governance has demonstrably held.
 
 Suggested dummy: a CLI that uppercases stdin and exits 0.
 
+**Where commissioning notes may live.** The commissioning plan, the
+expected outcome of each refusal test, and the run record live *outside*
+the repo under test — a separate directory or a private repo. Not in the
+tracked tree, and not as untracked files inside the working copy either:
+an agent session reads whatever is in the repo it is pointed at, so
+either placement tells the session it is being tested and what answer is
+wanted. A session that knows it is being tested cannot give a blind
+result, and the refusal tests then prove nothing. The only commissioning
+output that belongs in the repo is the finished `docs/assurance-log.md`
+entry (§10), written after the run.
+
 1. Fill `docs/product.md` with two sentences and one non-goal
    ("no HTTP, no config file").
 2. Fill in the Commands block in `AGENTS.md` (install / test / lint)

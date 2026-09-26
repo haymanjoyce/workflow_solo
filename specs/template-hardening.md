@@ -44,7 +44,7 @@ be ticked after one agent product when §9 requires two.
 
 ## Plan                 <!-- human edits; agents propose via log -->
 - [x] task 1 — §9: move Commands to step 2; reword §9.9 to confirm
-- [ ] task 2 — §9: add the rule on where commissioning notes may live
+- [x] task 2 — §9: add the rule on where commissioning notes may live
 - [ ] task 3 — add refusal test D to §9 immediately after the first
       implementation session and before the remaining ones (spec active
       and approved, before acceptance), extend §10's drill and
@@ -78,4 +78,28 @@ line reading "§9.9 confirms that block" now points at §9.10. The Plan
 task's wording ("move Commands to step 2") was followed literally.
 Task 3's "between steps 4 and 5" reads, under the new numbering, as
 between refusal test A and the first implementation session.
+PROPOSAL (if any): none.
+
+### 2026-09-26 — session 2
+Agent/tool: Claude Code (Opus 5)
+Did: task 2. WORKFLOW.md §9 only. Added a bolded rule, "Where
+commissioning notes may live", between the suggested-dummy line and
+step 1, so the operator reads it before doing anything. It requires the
+commissioning plan, each refusal test's expected outcome, and the run
+record to live outside the repo under test — excluding untracked files
+in the working copy as well as the tracked tree, since an agent reads
+whatever is in the repo it is pointed at — and states the reason (a
+session that knows it is being tested gives no blind result). It names
+the one commissioning output that does belong in the repo: the
+`docs/assurance-log.md` entry of §10, written after the run.
+Checks run: none — AGENTS.md's Commands block is empty (install/test/
+lint unset) in this markdown-only repo, so there is nothing to run.
+No test written: prose in a specification document, no executable
+behaviour (§5's docs-only case). Verified by reading: the rule sits
+before step 1 so §9's steps are untouched and still numbered 1–10; it
+refers to "the refusal tests" without a letter range, so task 3's
+addition of test D does not leave it stale; §7's fenced AGENTS.md copy
+was not touched, so it stays byte-identical to AGENTS.md.
+Left: tasks 3–7. Task 3 is next and extends §9, §10 and
+docs/assurance-log.md from A–C to A–D.
 PROPOSAL (if any): none.
