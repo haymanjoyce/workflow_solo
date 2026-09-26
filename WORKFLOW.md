@@ -215,7 +215,12 @@ Then commit per the Git rules below.
 - If the working tree contains changes you did not make, stop and ask.
 
 ## Commands
-(exact, filled in during commissioning; keep current)
+(exact, filled in during commissioning; keep current. The shell line
+names the shell these lines are written for — the same line can fail,
+or mean something else, in another. If your session runs a different
+shell, translate and say so in the log; never substitute a different
+command and record it as the check.)
+shell:
 install:
 test:
 lint:
@@ -314,8 +319,8 @@ entry (§10), written after the run.
 
 1. Fill `docs/product.md` with two sentences and one non-goal
    ("no HTTP, no config file").
-2. Fill in the Commands block in `AGENTS.md` (install / test / lint)
-   with your best current commands for the dummy's stack. Do this
+2. Fill in the Commands block in `AGENTS.md` (shell / install / test /
+   lint) with your best current commands for the dummy's stack. Do this
    *before* any implementation step: §5 lets an agent tick a Plan task
    only when the listed checks pass, so an empty block makes the very
    first task unverifiable. A provisional value is fine — the final

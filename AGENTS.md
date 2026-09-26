@@ -55,7 +55,12 @@ Then commit per the Git rules below.
 - If the working tree contains changes you did not make, stop and ask.
 
 ## Commands
-(exact, filled in during commissioning; keep current)
+(exact, filled in during commissioning; keep current. The shell line
+names the shell these lines are written for — the same line can fail,
+or mean something else, in another. If your session runs a different
+shell, translate and say so in the log; never substitute a different
+command and record it as the check.)
+shell:
 install:
 test:
 lint:

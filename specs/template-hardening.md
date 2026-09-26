@@ -51,7 +51,7 @@ be ticked after one agent product when §9 requires two.
       docs/assurance-log.md's columns from A–C to A–D
 - [x] task 4 — reconcile §5's required log content with TEMPLATE.md's
       Agent/tool field (AGENTS.md + §7 fenced copy)
-- [ ] task 5 — add a shell convention to the Commands block
+- [x] task 5 — add a shell convention to the Commands block
       (AGENTS.md + §7 fenced copy)
 - [ ] task 6 — §13: make the two-product bar explicit in the item
 - [ ] task 7 — §2: add tests/ to the skeleton
@@ -176,4 +176,45 @@ TEMPLATE.md's block now agree in both content and order.
 Left: tasks 5–7, and the README drift raised in session 3, still open.
 Task 5 also edits AGENTS.md (the Commands block) and will need its own
 scribe authorisation — this one was for this session only.
+PROPOSAL (if any): none.
+
+### 2026-09-26 — session 5
+Agent/tool: Claude Code (Opus 5)
+Scribe authorisation: the human was shown the hunk before anything was
+written and answered "Authorise me as scribe" to the question "Task 5
+adds a shell convention to AGENTS.md's Commands block. Apply it how?",
+granting an explicit per-session scribe authorisation for AGENTS.md.
+Recorded here per this spec's Constraints. Separate from session 4's,
+which covered task 4 only.
+Did: task 5. AGENTS.md and WORKFLOW.md.
+- AGENTS.md's Commands block gains a "shell:" field above install/
+  test/lint, and its parenthetical now says what that field is for:
+  the same command line can fail, or mean something else, in another
+  shell. It also states what to do when a session's shell differs —
+  translate and say so in the log, never substitute a different
+  command and record it as the check, which would make §5's tick
+  describe something commissioning never ran.
+- §7's fenced copy took the identical hunk, same commit, per this
+  spec's Constraints.
+- §9 step 2's parenthetical list "(install / test / lint)" is now
+  "(shell / install / test / lint)". Not named in the Plan task, but
+  this task is what made it incomplete.
+Deviation from the approved hunk, for the record: the approved preview
+wrote the field as `shell:` in backticks. AGENTS.md uses no backticks
+anywhere, so it went in as "The shell line names the shell these lines
+are written for". Same rule, file's own idiom; say the word if you
+want the backticks.
+Checks run: none — AGENTS.md's Commands block still has no values
+(shell/install/test/lint unset) in this markdown-only repo, so there
+is nothing to run. Adding the field does not change that; the block is
+filled per §9 step 2 by whoever commissions a real project from this
+template.
+No test written: prose in governance documents, no executable
+behaviour (§5's docs-only case). Verified by reading: `diff` of
+AGENTS.md against §7's fenced copy extracted from WORKFLOW.md reports
+no difference; grep for "install / test / lint" and "Commands block"
+across the repo leaves no stale list.
+Left: tasks 6 and 7, and the README drift raised in session 3, still
+open. Task 6 (§13's two-product bar) and task 7 (§2's skeleton) touch
+WORKFLOW.md only, so neither needs a scribe authorisation.
 PROPOSAL (if any): none.
