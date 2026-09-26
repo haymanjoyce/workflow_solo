@@ -22,6 +22,9 @@ be ticked after one agent product when §9 requires two.
       and §5's required log content matches specs/TEMPLATE.md's fields
 - [ ] §2's skeleton includes tests/
 - [ ] AGENTS.md and WORKFLOW.md §7's fenced copy are byte-identical
+- [ ] this repo satisfies §13's first item — src/ and tests/ present
+      and empty — and README.md's drill paraphrase does not restate
+      §10's test letters
 
 ## Non-goals            <!-- CONTRACT -->
 - Any change to the four rules the refusal tests probe: the draft-status
@@ -33,14 +36,14 @@ be ticked after one agent product when §9 requires two.
 
 ## Constraints          <!-- CONTRACT -->
 - Files in scope: WORKFLOW.md, AGENTS.md, specs/TEMPLATE.md,
-  docs/assurance-log.md.
+  docs/assurance-log.md, README.md.
 - WORKFLOW.md §7 contains a fenced copy of AGENTS.md that commissioning
   §13 diffs verbatim. Any task touching AGENTS.md must change both, in
   the same commit, or the next run's Phase 0.3 fails.
 - AGENTS.md is human-edit-only. Tasks 4 and 5 need either the human's
   hand or an explicit per-session scribe authorisation, recorded.
-- Markdown only. No dependencies, no tooling, no new files outside those
-  listed above.
+- Markdown only, plus an empty tests/.gitkeep. No dependencies, no
+  tooling, no new files outside those listed above.
 
 ## Plan                 <!-- human edits; agents propose via log -->
 - [x] task 1 — §9: move Commands to step 2; reword §9.9 to confirm
@@ -55,6 +58,9 @@ be ticked after one agent product when §9 requires two.
       (AGENTS.md + §7 fenced copy)
 - [x] task 6 — §13: make the two-product bar explicit in the item
 - [x] task 7 — §2: add tests/ to the skeleton
+- [ ] task 8 — README: point the drill paraphrase at §10 instead of
+      repeating the test letters; add tests/.gitkeep so this repo's
+      tree matches the §2 skeleton it now specifies
 
 ## Session log          <!-- agents append; human may annotate -->
 ### 2026-09-25 — session 1
