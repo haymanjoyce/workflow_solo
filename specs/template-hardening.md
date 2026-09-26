@@ -58,7 +58,7 @@ be ticked after one agent product when §9 requires two.
       (AGENTS.md + §7 fenced copy)
 - [x] task 6 — §13: make the two-product bar explicit in the item
 - [x] task 7 — §2: add tests/ to the skeleton
-- [ ] task 8 — README: point the drill paraphrase at §10 instead of
+- [x] task 8 — README: point the drill paraphrase at §10 instead of
       repeating the test letters; add tests/.gitkeep so this repo's
       tree matches the §2 skeleton it now specifies
 
@@ -319,3 +319,56 @@ Optionally add a seventh Done-when item, since no existing one covers
 the repo's own tree: "this repo satisfies §13's first item — src/ and
 tests/ present and empty — and README.md's drill paraphrase does not
 restate §10's test letters". Your call; Done-when is contract.
+
+### 2026-09-26 — session 9
+Agent/tool: Claude Code (Opus 5)
+Scribe authorisation: the human was shown the four amendment hunks
+(Constraints ×2, Plan task 8, the optional seventh Done-when item) and
+answered "please do all this on my behalf, acting as scribe", granting
+an explicit per-session scribe authorisation for this spec's Plan and
+Constraints. Recorded here per the precedent the Constraints set for
+AGENTS.md in sessions 4 and 5. Note for the reader of a future refusal
+test D: this session edited the Plan under that authorisation, which
+is why the edit is not a failure of the Plan-edit rule — but it is the
+first time the rule has been set aside, and it was set aside by the
+human, not by the agent. Session 8 declined the same request when it
+arrived without authorisation, which is the behaviour D probes.
+The amendment went in as its own commit, before any task work, so the
+human's contract edit and the agent's implementation revert
+independently.
+Did: task 8, the last Plan task. README.md and tests/.gitkeep.
+- README's "Keeping it honest" no longer names the test letters. It
+  said "refusal tests A–C" and "A/B/C pass–fail"; it now says "the
+  refusal tests" and "a pass–fail per test", and a following sentence
+  states that §10 is the rule and this paragraph only summarises it,
+  with which tests run and what each needs deliberately not repeated.
+  That is the drift-proof form of the two offered in session 3's
+  proposal: §10 can grow a test E without touching README.
+- Added an empty tests/.gitkeep, so this repo's tree matches the §2
+  skeleton task 7 gave it. Same convention as the existing
+  src/.gitkeep and specs/done/.gitkeep, all three 0 bytes.
+Checks run: none — AGENTS.md's Commands block has no values
+(shell/install/test/lint unset) in this markdown-only repo, so there
+is nothing to run.
+No test written: prose in a readme and an empty placeholder file, no
+executable behaviour (§5's docs-only case). Verified by reading and by
+command: grep for "A–C", "A-C" and "A/B/C" across the repo now returns
+only this spec's own history and WORKFLOW.md's "A/B/C/D", none of them
+stale; `ls -l` shows src/, tests/ and specs/done/ each holding one
+0-byte .gitkeep and nothing else, which is §13 item 1; `cmp` and
+`diff` of AGENTS.md against §7's fenced copy (WORKFLOW.md lines
+162–231) both report no difference — neither file was touched this
+session, so Done-when item 6 still holds.
+Left: nothing in the Plan — tasks 1–8 are all ticked, and the two
+items session 7 left outside it are now closed. Done-when is yours to
+tick; all seven items look met to me, but that judgement is acceptance
+and not mine to make. After acceptance the standing sequence is §9's
+second-product commissioning pass against a fresh throwaway, which is
+what §13's checklist item still waits on.
+Noted, not changed: §13 item 1 checks `src/` and `tests/` are empty,
+and .gitkeep is how this repo keeps an empty directory in git. A
+literal reading of "empty" fails on a directory containing a file. The
+existing src/ has always had the same shape, so the convention is
+established and I left it; say the word if you want §13 to read
+"empty but for .gitkeep".
+PROPOSAL (if any): none.

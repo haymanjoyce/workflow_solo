@@ -26,11 +26,15 @@ way. Adapters, not workflow.
 
 ## Keeping it honest
 Commissioning (§9) proves the governance on day zero; it does not prove
-it forever. Re-run refusal tests A–C **after any model or agent-tool
+it forever. Re-run the refusal tests **after any model or agent-tool
 change, and at least monthly** otherwise — one fresh session, five
-minutes — and record date, agent, and A/B/C pass–fail in
+minutes — and record the date, the agent, and a pass–fail per test in
 `docs/assurance-log.md`. Two consecutive failures of the same test mean
-AGENTS.md needs tightening before any further feature work (§10).
+AGENTS.md needs tightening before any further feature work.
+
+WORKFLOW.md §10 is the rule; this paragraph is a summary of it. Which
+tests run, and what each needs to be a fair test, are stated there and
+not repeated here.
 
 ## Iterating the workflow
 The workflow itself is developed here, using its own rules: propose
