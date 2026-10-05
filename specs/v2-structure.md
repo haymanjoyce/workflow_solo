@@ -80,7 +80,7 @@ rule requiring a second, byte-identical copy to change with it.
       §8 become pointers to AGENTS.md and the template files), NOTES.md
       and docs/commissioning.md, and delete WORKFLOW.md, all in one
       commit, so no rule is ever homeless
-- [ ] task 3 — repoint citations: README.md, docs/assurance-log.md's
+- [x] task 3 — repoint citations: README.md, docs/assurance-log.md's
       heading, and AGENTS.md's reading list (scribe-authorised session)
 
 ## Session log          <!-- agents append; human may annotate -->
@@ -446,3 +446,46 @@ It is not in this spec's Files in scope, but the Done-when's
 `.gitignore` to task 3 (repoint to docs/commissioning.md), or edits it
 directly. Separately, that grep will also hit this spec and the other
 v2 specs until they move to specs/done/.
+
+### 2026-10-05 — session 5 (task 3)
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 3. The human had already made the AGENTS.md reading-list
+change and repointed `.gitignore` themselves (commit 7704c59), so this
+session did not edit AGENTS.md and needed no scribe authorisation.
+Repointed the rest:
+- README.md: the file list names RULES.md (read first), NOTES.md
+  (non-normative) and docs/commissioning.md (the human's procedures,
+  not for agents) in place of WORKFLOW.md. "Starting a new project"
+  step 2 names docs/commissioning.md. "Pointing an agent" now reads
+  "Follow RULES.md; AGENTS.md governs your behaviour." and names
+  neither NOTES.md nor docs/commissioning.md. The adapter rule cites
+  AGENTS.md's "Role of this file" instead of §2. "Keeping it honest"
+  cites docs/commissioning.md's Fire drill section instead of §9/§10.
+  "Iterating the workflow" names RULES.md/AGENTS.md.
+- docs/assurance-log.md heading: "(docs/commissioning.md, Fire drill)"
+  instead of "(WORKFLOW.md §10)".
+Checks run: AGENTS.md's Commands block has no values (markdown-only
+repo), so there is no test or lint to run. Shell: Git Bash. Done-when
+greps:
+`grep -rln WORKFLOW.md --exclude-dir=.git .` → specs/done/
+template-hardening.md and this spec only;
+`grep -rl "## Role of this file" --exclude-dir=.git .` → AGENTS.md and
+this spec (its own Done-when quotes the string);
+`grep -nE "NOTES.md|commissioning.md" AGENTS.md CLAUDE.md` and the same
+over README's "Pointing an agent" section → nothing;
+`git ls-files | grep -v '^specs/done/' | xargs grep -niE
+"verbatim|byte-for-byte|byte-identical"` → this spec only, which
+describes the retired rule and requires nothing.
+No test written: docs-only task with no executable behaviour.
+Left: all Plan tasks are done; the Done-when boxes are the human's.
+Two things the human may want to know when ticking them:
+1. Two Done-when greps match this spec's own text (WORKFLOW.md; "##
+   Role of this file"). The first clears when the spec moves to
+   specs/done/; the second still matches there, because `grep -rl`
+   has no specs/done/ exclusion in that line.
+2. AGENTS.md:17, the human's reading-list edit, is 88 characters. No
+   rule caps AGENTS.md line length; mentioned only because RULES.md
+   holds itself to 80. The edit also moved later AGENTS.md lines up by
+   one, so session 3's map citations from AGENTS.md:18 onward are one
+   line high.
+PROPOSAL (if any): none.
