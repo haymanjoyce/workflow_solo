@@ -359,3 +359,21 @@ PROPOSAL (if any): none to the Plan. Questions for the map review:
 5. §1.5 (L24–25) names three contract fields; §4 and AGENTS.md:30 name
    four, adding Constraints. RULES.md would use the four. No force is
    lost, but please confirm.
+
+### 2026-10-05 — session 3 (map review)
+Agent/tool: Claude Code (Opus 5.5)
+Did: recorded the human's review of session 3's map. The human
+approved the map as written and answered yes to all five questions,
+taking each recommendation:
+1. §9's blind-test reasoning goes to docs/commissioning.md; NOTES.md
+   describes no refusal test.
+2. §13 goes to docs/commissioning.md; L418 becomes "AGENTS.md present"
+   and L419 names specs/TEMPLATE.md and specs/TEMPLATE-hotfix.md.
+3. RULES.md Layout lists docs/assurance-log.md.
+4. Task 2 repoints "§N" citations in moved text to file and section
+   names.
+5. RULES.md names four contract fields, Constraints included.
+Task 2 implements the map with these answers. No other file changed.
+Checks run: none — log-only change; Commands block has no values.
+Left: tasks 2 and 3, each in its own session.
+PROPOSAL (if any): none.
