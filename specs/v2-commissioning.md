@@ -1,6 +1,6 @@
 # Spec: v2-commissioning
 
-Status: draft
+Status: approved
 Created: 2026-10-05
 
 ## Goal
