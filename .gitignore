@@ -1,5 +1,5 @@
 # Language-agnostic by design. Add project-specific ignores during
-# commissioning (WORKFLOW.md §9), not here.
+# commissioning (docs/commissioning.md), not here.
 
 # Secrets — AGENTS.md Conventions: no secrets in the repo.
 .env

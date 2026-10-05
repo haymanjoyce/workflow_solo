@@ -14,8 +14,7 @@ Never store or rely on project state in any vendor memory feature; the
 repo is the system.
 
 ## Workflow — every session
-1. Read AGENTS.md, docs/product.md, specs/_active.md, then the spec(s)
-   it names.
+1. Read AGENTS.md, RULES.md, docs/product.md, specs/_active.md, then the spec(s) it names.
 2. If _active.md says "none": do not write application code. You may
    only improve docs, specs, or tooling — and only if asked.
 3. Do not implement a spec whose Status is not "approved".
