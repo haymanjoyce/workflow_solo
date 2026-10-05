@@ -67,10 +67,10 @@ with a reason.
   throwaway, and its evidence stays outside the template.
 
 ## Plan                 <!-- human edits; agents propose via log -->
-- [ ] task 1 — RULES.md and AGENTS.md: definition of a fresh session,
+- [x] task 1 — RULES.md and AGENTS.md: definition of a fresh session,
       the fixed dispatch prompt, and the one-task-per-instruction
       limit on dispatchers
-- [ ] task 2 — reviewer role in AGENTS.md; the review-before-tick gate,
+- [x] task 2 — reviewer role in AGENTS.md; the review-before-tick gate,
       the waiver and the hotfix exemption in RULES.md's closing rule;
       the rationale in NOTES.md
 - [ ] task 3 — trial in a throwaway: one dispatched task and one
