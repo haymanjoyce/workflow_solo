@@ -76,7 +76,7 @@ rule requiring a second, byte-identical copy to change with it.
       AGENTS.md, docs/commissioning.md, a template file, or NOTES.md).
       Record the map in the Session log. No other file changes. The
       human reviews the map before task 2
-- [ ] task 2 — per the approved map: write RULES.md (≤66 lines; §7 and
+- [x] task 2 — per the approved map: write RULES.md (≤66 lines; §7 and
       §8 become pointers to AGENTS.md and the template files), NOTES.md
       and docs/commissioning.md, and delete WORKFLOW.md, all in one
       commit, so no rule is ever homeless
@@ -377,3 +377,72 @@ Task 2 implements the map with these answers. No other file changed.
 Checks run: none — log-only change; Commands block has no values.
 Left: tasks 2 and 3, each in its own session.
 PROPOSAL (if any): none.
+
+### 2026-10-05 — session 4 (task 2)
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 2, per session 3's map and the human's review. Wrote RULES.md
+(66 lines), NOTES.md and docs/commissioning.md, and deleted WORKFLOW.md
+(`git rm`), in one commit. Layout changes from the planned sections, to
+fit 66 lines: Principles sit under the opening paragraph with no
+heading; "Pointers" folded into that paragraph (AGENTS.md) and the
+last section (templates); Review, Git and Spec size share one section;
+the Active spec and Hotfix lane sections are merged. _active.md's
+format is written inline, not as a two-line block.
+Line resolution of session 3's map. Each row's planned destination
+section resolves to these lines; AGENTS.md, TEMPLATE.md and HOTFIX.md
+citations are unchanged, since none of those files changed.
+- Header: L3–4 → RULES.md:2; L8–9 → RULES.md:5–6; W L5–8 → NOTES.md:7–10
+- §1: L15–17 → RULES.md:7; W L15–16 → NOTES.md:12–15; L18–19 →
+  RULES.md:8; L20–21 → RULES.md:9; L22–23 → RULES.md:10, with the lane
+  at RULES.md:41–44; W L22 → NOTES.md:17–18; L24–26 → RULES.md:19,25;
+  L27–28 → RULES.md:63–65
+- §2: L34–47 → RULES.md:13–15; L45 → RULES.md:15; L49 → RULES.md:16;
+  W L51–53 → NOTES.md:47–50
+- §3: L59–66 → RULES.md:21–34; L62 → RULES.md:25; L63 → RULES.md:31;
+  L64 → RULES.md:24,41–44; L68–73 → RULES.md:37–39; W L71 →
+  NOTES.md:24–28
+- §4: L83–91 human column → RULES.md:23–33; L86 → RULES.md:27; L87 →
+  RULES.md:28; L89 → RULES.md:30; L92 → RULES.md:34; W L79, L94–102 →
+  NOTES.md:30–39
+- §5: W L118–120 → NOTES.md:44–45; L122–123 → RULES.md:51; W L123–125
+  → NOTES.md:41–43
+- §6: W L131–132 → NOTES.md:19–21; L136–137 → RULES.md:41–42; L138–141
+  → RULES.md:42–44; W L143–144 → NOTES.md:21–22; L145–147 →
+  RULES.md:48–50; L148 → RULES.md:57; L150–155 → RULES.md:39–40
+- §7: L159 → RULES.md:4–5 (AGENTS.md followed as written; it is the
+  sole copy); L161–232 → AGENTS.md as mapped
+- §8: L238–270 → RULES.md:65 names specs/TEMPLATE.md; L277–299 →
+  RULES.md:65–66 names specs/TEMPLATE-hotfix.md; L272–275 →
+  RULES.md:52–53; W "long-thread rot" → NOTES.md:52–55
+- §9: L305–306 → RULES.md:63 and docs/commissioning.md:8–9; L308–360
+  → docs/commissioning.md:11 (dummy), 13–22 (notes placement, with the
+  blind-test reasoning), 24–59 (steps 1–11), 61–64 (two-agent bar)
+- §10: W L366–367 → NOTES.md:65–67; L369–376 → docs/commissioning.md:
+  68–75 and RULES.md:63–65
+- §11: L383–384 → RULES.md:47; L387–390 → RULES.md:48–50; W L391–393 →
+  NOTES.md:57–59
+- §12: L399–400 → RULES.md:56; L401–402 → RULES.md:56–58; L403–405 →
+  RULES.md:58–60; L406–407 → RULES.md:60; W → NOTES.md:61–63
+- §13: L413–430 → docs/commissioning.md:77–95; L418 at :83, L419 at :84
+Moved text in docs/commissioning.md repoints its citations: §5 →
+AGENTS.md's "Completing a task", §10 → "Fire drill, below", §9 →
+"Commissioning, above", §2 → RULES.md's Layout. Otherwise §9, §10 and
+§13 are v1's text.
+Checks run: AGENTS.md's Commands block has no values (markdown-only
+repo), so there is no test or lint to run. Shell: Git Bash. Ran the
+Done-when checks that apply to this task:
+`wc -l RULES.md` → 66; `awk 'length>80' RULES.md` → nothing;
+`grep -inE 'rationale|because' RULES.md` → nothing;
+`grep -rl "## Role of this file" .` → ./AGENTS.md alone;
+`git ls-files` shows no WORKFLOW.md and does show RULES.md, NOTES.md
+and docs/commissioning.md once committed. No test written: docs-only
+task with no executable behaviour.
+Left: task 3. Until it lands, README.md and docs/assurance-log.md
+still cite WORKFLOW.md, which no longer exists. Task 3's AGENTS.md edit
+may shift AGENTS.md's line numbers, which the map cites.
+PROPOSAL (if any): `.gitignore` line 2 also cites "WORKFLOW.md §9".
+It is not in this spec's Files in scope, but the Done-when's
+`grep -rn WORKFLOW.md` will find it. Suggest the human adds
+`.gitignore` to task 3 (repoint to docs/commissioning.md), or edits it
+directly. Separately, that grep will also hit this spec and the other
+v2 specs until they move to specs/done/.
