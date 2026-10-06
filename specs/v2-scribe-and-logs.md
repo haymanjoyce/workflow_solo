@@ -16,7 +16,7 @@ a reader can scan it in seconds. Prose appears only where a session
 deviated from its task or is proposing a change.
 
 ## Done when            <!-- CONTRACT — human edits, human ticks -->
-- [ ] AGENTS.md has a Scribe section, and `grep -rn -i scribe` outside
+- [x] AGENTS.md has a Scribe section, and `grep -rn -i scribe` outside
       specs/done/ finds the rule there
 - [ ] The Scribe section lists the artefacts a scribe may change:
       a spec's Goal, Done-when text, Non-goals, Constraints, Plan and
@@ -74,7 +74,7 @@ deviated from its task or is proposing a change.
       drafting new specs. Add exception cross-references to the "never
       edit" statements in AGENTS.md and to RULES.md's edit-authority
       matrix
-- [ ] task 2 — terse log format: rewrite TEMPLATE.md's log block, and
+- [x] task 2 — terse log format: rewrite TEMPLATE.md's log block, and
       align AGENTS.md's completion rule and TEMPLATE-hotfix.md with it
 
 ## Session log          <!-- agents append; human may annotate -->
@@ -159,4 +159,11 @@ and RULES.md). Commands block unset, markdown-only repo; no test
 applies to governance prose.
 Left: task 2. NOTES.md rationale for the scribe rule is in scope but
 not named by task 1, so it was not added.
+PROPOSAL (if any): none.
+
+### 2026-10-06 — session 4
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 2 — TEMPLATE.md log block gains a one-line-per-field note saying prose goes only under PROPOSAL; TEMPLATE-hotfix.md unchanged ("as feature spec" inherits it); two scribe commits first: AGENTS.md completion rule names the five fields (authorised: "i authorise you to act as scribe"), Done-when item 9 and task 2 drop RULES.md's completion rule, which v2-structure removed (authorised: "i authorise that change"); the human's tick of Done-when item 1 is included at their request.
+Checks run: `sed -n '/## Session log/,$p' specs/TEMPLATE.md` and `grep -n -A2 "every field" AGENTS.md` (same five fields, same order); Commands block unset, markdown-only repo, no test applies to governance prose.
+Left: NOTES.md rationale for the scribe rule and terse logs, in scope but named by no task.
 PROPOSAL (if any): none.

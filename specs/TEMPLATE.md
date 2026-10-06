@@ -21,6 +21,8 @@ One paragraph. What a user can do when this is done.
 - [ ] task 2
 
 ## Session log          <!-- agents append; human may annotate -->
+<!-- Five fields, one line each. Prose goes only under PROPOSAL, and
+     only to explain a deviation from the task or a proposed change. -->
 ### YYYY-MM-DD — session N
 Agent/tool:
 Did:
