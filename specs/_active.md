@@ -1,3 +1,3 @@
-active: specs/v2-scribe-and-logs.md
+active: specs/v2-agents.md
 hotfix: none
 

@@ -1,6 +1,6 @@
 # Spec: v2-scribe-and-logs
 
-Status: approved
+Status: done
 Created: 2026-10-05
 
 ## Goal
@@ -18,29 +18,29 @@ deviated from its task or is proposing a change.
 ## Done when            <!-- CONTRACT — human edits, human ticks -->
 - [x] AGENTS.md has a Scribe section, and `grep -rn -i scribe` outside
       specs/done/ finds the rule there
-- [ ] The Scribe section lists the artefacts a scribe may change:
+- [x] The Scribe section lists the artefacts a scribe may change:
       a spec's Goal, Done-when text, Non-goals, Constraints, Plan and
       Status; specs/_active.md; docs/product.md; AGENTS.md. Ticking
       Done-when checkboxes is not on the list
-- [ ] The Scribe section requires the agent to show the human the
+- [x] The Scribe section requires the agent to show the human the
       exact change, and to write only after an explicit authorisation
       given in reply to that shown change. It states that a request to
       make a change is never, by itself, authorisation
-- [ ] The Scribe section requires the human's authorising words to be
+- [x] The Scribe section requires the human's authorising words to be
       quoted in the session's Did line
-- [ ] The Scribe section requires a scribe edit to be its own commit,
+- [x] The Scribe section requires a scribe edit to be its own commit,
       separate from task work, with a message naming it as a scribe
       edit
-- [ ] The Scribe section states that an agent may draft a new spec,
+- [x] The Scribe section states that an agent may draft a new spec,
       contract sections included, at the human's request, only with
       Status: draft
-- [ ] Every "never edit" or "read only" statement in AGENTS.md and
+- [x] Every "never edit" or "read only" statement in AGENTS.md and
       RULES.md that covers an artefact on the scribe list names the
       Scribe section as its one exception
-- [ ] specs/TEMPLATE.md's log block has exactly five fields, each a
+- [x] specs/TEMPLATE.md's log block has exactly five fields, each a
       single line: Agent/tool, Did, Checks run, Left, PROPOSAL. It says
       where deviation and proposal prose goes
-- [ ] AGENTS.md's completion rule and TEMPLATE.md name the same five
+- [x] AGENTS.md's completion rule and TEMPLATE.md name the same five
       fields in the same order
 
 ## Non-goals            <!-- CONTRACT -->
