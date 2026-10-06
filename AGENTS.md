@@ -25,6 +25,8 @@ repo is the system.
    behaviour, stop and tell the human it needs a feature spec.
 
 ## What you may never edit
+One exception: the Scribe section below. It never covers Done-when
+checkboxes.
 - docs/product.md
 - Any spec's Goal, Done when, Non-goals, Constraints, or Status field
 - specs/_active.md
@@ -32,9 +34,31 @@ repo is the system.
 - Done-when checkboxes (the human ticks acceptance, never you)
 
 ## Plan changes
-You do not edit the Plan. If the approach is wrong, write a "PROPOSAL:"
+You do not edit the Plan, except as scribe under the Scribe section,
+the one exception. If the approach is wrong, write a "PROPOSAL:"
 entry in the Session log stating the change and why, then stop. The
 human edits the Plan and re-dispatches.
+
+## Scribe
+The human may have an agent type a change the human has decided. Under
+this section, and only under it, an agent may change:
+- a spec's Goal, Done-when text, Non-goals, Constraints, Plan and
+  Status;
+- specs/_active.md;
+- docs/product.md;
+- AGENTS.md.
+Ticking a Done-when checkbox is not on this list. Acceptance stays the
+human's own act.
+The decision is the human's, in their own words; the agent only types
+it. Before writing, show the human the exact change. Write only after
+the human explicitly authorises it in reply to that shown change. A
+request to make a change is never, by itself, authorisation.
+Quote the human's authorising words in the session's Did line.
+Commit a scribe edit on its own, separate from task work, with the
+message "<spec-name>: scribe — <what changed>".
+At the human's request an agent may draft a new spec, contract sections
+included, but only with Status: draft. Nothing in a draft is contract
+until the human approves it.
 
 ## Completing a task
 You may tick a Plan task checkbox only when ALL of:

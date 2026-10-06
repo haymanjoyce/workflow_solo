@@ -33,6 +33,10 @@ A spec's contract is its Goal, Done when, Non-goals and Constraints.
 | README.md | human orientation | as needed |
 | src/, tests/ | the product | human; agent within the spec's Constraints |
 
+AGENTS.md's Scribe section is the one exception to the human rows for
+docs/product.md, Spec contract, Spec Status, Spec Plan,
+specs/_active.md and AGENTS.md. Done-when boxes have none.
+
 ## Active spec and hotfix lane
 specs/_active.md says what is in play; a spec's Status says where it is
 in its lifecycle. If they disagree, the agent stops and asks, and the

@@ -69,7 +69,7 @@ deviated from its task or is proposing a change.
 - Markdown only.
 
 ## Plan                 <!-- human edits; agents propose via log -->
-- [ ] task 1 — AGENTS.md Scribe section: scope list, the shown-change
+- [x] task 1 — AGENTS.md Scribe section: scope list, the shown-change
       and explicit-yes precondition, the quote in Did, own-commit rule,
       drafting new specs. Add exception cross-references to the "never
       edit" statements in AGENTS.md and to RULES.md's edit-authority
@@ -142,3 +142,22 @@ draft; Status stays draft. Decisions, in the human's chosen options:
 Checks run: none — markdown-only repo, Commands block unset.
 Left: everything; the spec is unapproved.
 PROPOSAL (if any): none open.
+
+### 2026-10-06 — session 3
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 1, under a per-session scribe authorisation per this spec's
+Constraints: the human was shown the exact hunks and answered "i
+authorise you". AGENTS.md gains a Scribe section (scope list, shown
+change and explicit authorisation, the quote in Did, own-commit rule,
+drafting with Status: draft); "What you may never edit" and "Plan
+changes" name it as the one exception. RULES.md gains one line under
+the edit-authority table naming the same exception for its human rows.
+Task edit and scribe edit share one commit, as in template-hardening
+sessions 4 and 5: the own-commit rule was not in force until this
+commit.
+Checks run: `grep -rn -i scribe` outside specs/done/ (finds AGENTS.md
+and RULES.md). Commands block unset, markdown-only repo; no test
+applies to governance prose.
+Left: task 2. NOTES.md rationale for the scribe rule is in scope but
+not named by task 1, so it was not added.
+PROPOSAL (if any): none.
