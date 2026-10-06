@@ -38,11 +38,29 @@ scope-creep backdoor.
   the contractor does not sign off the contract. Plan checkboxes are
   progress markers; Done-when checkboxes are acceptance.
 
+## The scribe moves typing, not decisions
+Both hard lines are about who decides, not who types. Without a
+standing rule, each spec that needed an agent to type a contract edit
+had to invent the convention in its Constraints. The Scribe section
+makes it one rule. A request is not authorisation because an agent that
+reads "tweak the Goal" as licence has decided what the tweak is; showing
+the exact change first makes the human approve the words, not the
+intent. The quote in Did and the separate commit let a reviewer find
+every contract edit, see who decided it, and revert it alone. Ticking
+Done-when stays off the list: acceptance cannot be delegated.
+
 ## No self-certification
 Diffs look plausible more often than they are correct. The test
 requirement in AGENTS.md's completion rule is what makes a ticked task
 mean something. The log's Agent/tool line lets a later reader attribute
 a result to a model; the fire drill depends on it.
+
+## Terse logs
+The human reviews the diff plus the log's claims, so the log has to be
+quick to check. Five one-line fields scan in seconds, and fixed fields
+make an omission visible. Prose is kept for a deviation or a proposal,
+where the human has a decision to make, so it stands out instead of
+being buried in narrative.
 
 ## Adapters, not workflow
 A tool that insists on its own entry file (Claude Code reads CLAUDE.md,

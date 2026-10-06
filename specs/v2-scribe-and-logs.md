@@ -167,3 +167,10 @@ Did: task 2 — TEMPLATE.md log block gains a one-line-per-field note saying pro
 Checks run: `sed -n '/## Session log/,$p' specs/TEMPLATE.md` and `grep -n -A2 "every field" AGENTS.md` (same five fields, same order); Commands block unset, markdown-only repo, no test applies to governance prose.
 Left: NOTES.md rationale for the scribe rule and terse logs, in scope but named by no task.
 PROPOSAL (if any): none.
+
+### 2026-10-06 — session 5
+Agent/tool: Claude Code (Opus 5.5)
+Did: NOTES.md gains rationale sections "The scribe moves typing, not decisions" and "Terse logs", at the human's request ("add the NOTES.md rationale"); in the Constraints' scope (rationale only) but named by no Plan task, so recorded here rather than ticked.
+Checks run: `git diff --stat` (NOTES.md and this log only); Commands block unset, markdown-only repo, no test applies to non-normative rationale.
+Left: nothing for agents; the remaining Done-when boxes and closing the spec are the human's.
+PROPOSAL (if any): none.
