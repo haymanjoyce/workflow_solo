@@ -1,3 +1,3 @@
-active: specs/v2-structure.md
+active: specs/v2-scribe-and-logs.md
 hotfix: none
 

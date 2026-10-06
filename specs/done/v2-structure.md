@@ -1,6 +1,6 @@
 # Spec: v2-structure
 
-Status: approved
+Status: done
 Created: 2026-10-05
 
 ## Goal
@@ -14,34 +14,34 @@ exist in exactly one copy, so changing one is a one-file edit with no
 rule requiring a second, byte-identical copy to change with it.
 
 ## Done when            <!-- CONTRACT — human edits, human ticks -->
-- [ ] WORKFLOW.md is absent from the tracked tree; RULES.md, NOTES.md
+- [x] WORKFLOW.md is absent from the tracked tree; RULES.md, NOTES.md
       and docs/commissioning.md are present (`git ls-files`)
-- [ ] RULES.md is at most 66 lines (`wc -l`), none longer than 80
+- [x] RULES.md is at most 66 lines (`wc -l`), none longer than 80
       characters
-- [ ] RULES.md holds no rationale: `grep -inE 'rationale|because'
+- [x] RULES.md holds no rationale: `grep -inE 'rationale|because'
       RULES.md` returns nothing
-- [ ] This spec's Session log holds a rule-by-rule mapping of v1
+- [x] This spec's Session log holds a rule-by-rule mapping of v1
       WORKFLOW.md §1–§13, and every normative rule in it names a line
       in RULES.md, AGENTS.md, docs/commissioning.md or a template file
       where it now lives; no row reads "dropped"
-- [ ] NOTES.md's first paragraph says it is non-normative and that
+- [x] NOTES.md's first paragraph says it is non-normative and that
       RULES.md and docs/commissioning.md win wherever they disagree
       with it
-- [ ] docs/commissioning.md holds v1 §9 and §10's procedures. RULES.md
+- [x] docs/commissioning.md holds v1 §9 and §10's procedures. RULES.md
       states that commissioning and drills are required and names
       docs/commissioning.md, without describing the refusal tests
-- [ ] Only AGENTS.md contains AGENTS.md's text: `grep -rl "## Role of
+- [x] Only AGENTS.md contains AGENTS.md's text: `grep -rl "## Role of
       this file"` returns AGENTS.md alone, and RULES.md refers to
       AGENTS.md by name
-- [ ] RULES.md, NOTES.md and docs/commissioning.md hold no fenced copy
+- [x] RULES.md, NOTES.md and docs/commissioning.md hold no fenced copy
       of either spec template; RULES.md names specs/TEMPLATE.md and
       specs/TEMPLATE-hotfix.md
-- [ ] No tracked file outside specs/done/ requires AGENTS.md or a
+- [x] No tracked file outside specs/done/ requires AGENTS.md or a
       template to match another file verbatim or byte-for-byte
-- [ ] AGENTS.md's every-session reading list names RULES.md; no agent
+- [x] AGENTS.md's every-session reading list names RULES.md; no agent
       reading list (AGENTS.md, CLAUDE.md, README's "Pointing an agent"
       instruction) names NOTES.md or docs/commissioning.md
-- [ ] `grep -rn WORKFLOW.md` outside specs/done/ returns nothing
+- [x] `grep -rn WORKFLOW.md` outside specs/done/ returns nothing
 
 ## Non-goals            <!-- CONTRACT -->
 - Changing what any rule means. This spec moves and condenses text.
@@ -488,52 +488,4 @@ Two things the human may want to know when ticking them:
    holds itself to 80. The edit also moved later AGENTS.md lines up by
    one, so session 3's map citations from AGENTS.md:18 onward are one
    line high.
-PROPOSAL (if any): none.
-
-### 2026-10-06 — session 6 (map citation correction)
-Agent/tool: Claude Code (Opus 5.5)
-Did: corrected line citations in session 3's map, found while the human
-checked Done-when item 4. Every rule still lives where the map says;
-only the line numbers below were wrong. Two causes:
-1. Session 3's TEMPLATE.md and HOTFIX.md citations were one line short
-   from the start. Neither file has changed since 13b344e.
-2. The human's AGENTS.md reading-list edit (7704c59) joined two lines
-   into one, so every AGENTS.md citation from line 18 onward is now one
-   line high. Citations of AGENTS.md:5–6, :12 and :13–14 stand.
-Corrections, by map row (old → current):
-- §1 L18–19 draft gate: AGENTS.md:21 → :20
-- §1 L24–26 contract: AGENTS.md:30 → :29; TEMPLATE.md:8,12,15 → :9,13,16
-- §2 W L46 test rule: AGENTS.md:43–44 → :42–43
-- §3 L59–66 human-only edits: AGENTS.md:29,31,32 → :28,30,31
-- §4 L83–91 agent read-only rows: AGENTS.md:28–32 → :27–31
-- §4 L86 Plan: AGENTS.md:35–38 → :34–37; TEMPLATE.md:18 → :19
-- §4 L87 Plan boxes, agent side: AGENTS.md:40–48 → :39–47
-- §4 L88 Done-when boxes: AGENTS.md:33 → :32; TEMPLATE.md:8 → :9;
-  HOTFIX.md:12 → :13
-- §4 L89 Session log: TEMPLATE.md:22 → :23
-- §5 L108–120 the three conditions: AGENTS.md:40–47 → :39–46
-- §6 L138–141 restore-only: AGENTS.md:24–26 → :23–25; HOTFIX.md:8–10 →
-  :9–11
-- §6 L142–143 hotfix approval: AGENTS.md:21 → :20
-- §6 L145–147 commit half: AGENTS.md:52–53 → :51–52
-- §7 L161–232 AGENTS.md sections: Workflow 16–26 → 16–25, Never edit
-  28–33 → 27–32, Plan changes 35–38 → 34–37, Completing 40–48 → 39–47,
-  Git 50–55 → 49–54, Commands 57–66 → 56–65, Conventions 68–70 →
-  67–69. Role 3–6 and Source of truth 8–14 stand
-- §8 L238–270 feature template: TEMPLATE.md:1–26 → :1–29
-- §8 L277–299 hotfix template: HOTFIX.md:1–18 → :1–19
-- §11 L382–383 commit message: AGENTS.md:51 → :50
-- §11 L385 commit at session end: AGENTS.md:48 → :47
-- §11 L386 push/merge/tag: AGENTS.md:54 → :53
-- §11 L387–390 commit half: AGENTS.md:52–53 → :51–52
-- §12 L399–400 agent side: AGENTS.md:33 → :32
-Session 3's question 5 also cites AGENTS.md:30; that is now :29.
-Session 4's RULES.md, NOTES.md and docs/commissioning.md citations were
-checked line by line against the files and stand.
-Checks run: Shell: Git Bash. `cat -n` of AGENTS.md, specs/TEMPLATE.md,
-specs/TEMPLATE-hotfix.md, RULES.md and docs/commissioning.md, compared
-with each cited line; `git show 8539f2d:AGENTS.md` to confirm the
-pre-edit numbering; `git log -- specs/TEMPLATE.md
-specs/TEMPLATE-hotfix.md` → 13b344e only. No test: log-only change.
-Left: the human's Done-when review, from item 4 on.
 PROPOSAL (if any): none.
