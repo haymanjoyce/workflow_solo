@@ -489,3 +489,51 @@ Two things the human may want to know when ticking them:
    one, so session 3's map citations from AGENTS.md:18 onward are one
    line high.
 PROPOSAL (if any): none.
+
+### 2026-10-06 — session 6 (map citation correction)
+Agent/tool: Claude Code (Opus 5.5)
+Did: corrected line citations in session 3's map, found while the human
+checked Done-when item 4. Every rule still lives where the map says;
+only the line numbers below were wrong. Two causes:
+1. Session 3's TEMPLATE.md and HOTFIX.md citations were one line short
+   from the start. Neither file has changed since 13b344e.
+2. The human's AGENTS.md reading-list edit (7704c59) joined two lines
+   into one, so every AGENTS.md citation from line 18 onward is now one
+   line high. Citations of AGENTS.md:5–6, :12 and :13–14 stand.
+Corrections, by map row (old → current):
+- §1 L18–19 draft gate: AGENTS.md:21 → :20
+- §1 L24–26 contract: AGENTS.md:30 → :29; TEMPLATE.md:8,12,15 → :9,13,16
+- §2 W L46 test rule: AGENTS.md:43–44 → :42–43
+- §3 L59–66 human-only edits: AGENTS.md:29,31,32 → :28,30,31
+- §4 L83–91 agent read-only rows: AGENTS.md:28–32 → :27–31
+- §4 L86 Plan: AGENTS.md:35–38 → :34–37; TEMPLATE.md:18 → :19
+- §4 L87 Plan boxes, agent side: AGENTS.md:40–48 → :39–47
+- §4 L88 Done-when boxes: AGENTS.md:33 → :32; TEMPLATE.md:8 → :9;
+  HOTFIX.md:12 → :13
+- §4 L89 Session log: TEMPLATE.md:22 → :23
+- §5 L108–120 the three conditions: AGENTS.md:40–47 → :39–46
+- §6 L138–141 restore-only: AGENTS.md:24–26 → :23–25; HOTFIX.md:8–10 →
+  :9–11
+- §6 L142–143 hotfix approval: AGENTS.md:21 → :20
+- §6 L145–147 commit half: AGENTS.md:52–53 → :51–52
+- §7 L161–232 AGENTS.md sections: Workflow 16–26 → 16–25, Never edit
+  28–33 → 27–32, Plan changes 35–38 → 34–37, Completing 40–48 → 39–47,
+  Git 50–55 → 49–54, Commands 57–66 → 56–65, Conventions 68–70 →
+  67–69. Role 3–6 and Source of truth 8–14 stand
+- §8 L238–270 feature template: TEMPLATE.md:1–26 → :1–29
+- §8 L277–299 hotfix template: HOTFIX.md:1–18 → :1–19
+- §11 L382–383 commit message: AGENTS.md:51 → :50
+- §11 L385 commit at session end: AGENTS.md:48 → :47
+- §11 L386 push/merge/tag: AGENTS.md:54 → :53
+- §11 L387–390 commit half: AGENTS.md:52–53 → :51–52
+- §12 L399–400 agent side: AGENTS.md:33 → :32
+Session 3's question 5 also cites AGENTS.md:30; that is now :29.
+Session 4's RULES.md, NOTES.md and docs/commissioning.md citations were
+checked line by line against the files and stand.
+Checks run: Shell: Git Bash. `cat -n` of AGENTS.md, specs/TEMPLATE.md,
+specs/TEMPLATE-hotfix.md, RULES.md and docs/commissioning.md, compared
+with each cited line; `git show 8539f2d:AGENTS.md` to confirm the
+pre-edit numbering; `git log -- specs/TEMPLATE.md
+specs/TEMPLATE-hotfix.md` → 13b344e only. No test: log-only change.
+Left: the human's Done-when review, from item 4 on.
+PROPOSAL (if any): none.
