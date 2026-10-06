@@ -40,8 +40,8 @@ deviated from its task or is proposing a change.
 - [ ] specs/TEMPLATE.md's log block has exactly five fields, each a
       single line: Agent/tool, Did, Checks run, Left, PROPOSAL. It says
       where deviation and proposal prose goes
-- [ ] AGENTS.md's completion rule, RULES.md's completion rule and
-      TEMPLATE.md name the same five fields in the same order
+- [ ] AGENTS.md's completion rule and TEMPLATE.md name the same five
+      fields in the same order
 
 ## Non-goals            <!-- CONTRACT -->
 - Letting an agent decide a contract change, or tick Done-when. The
@@ -75,8 +75,7 @@ deviated from its task or is proposing a change.
       edit" statements in AGENTS.md and to RULES.md's edit-authority
       matrix
 - [ ] task 2 — terse log format: rewrite TEMPLATE.md's log block, and
-      align AGENTS.md's completion rule, RULES.md's completion rule and
-      TEMPLATE-hotfix.md with it
+      align AGENTS.md's completion rule and TEMPLATE-hotfix.md with it
 
 ## Session log          <!-- agents append; human may annotate -->
 ### 2026-10-05 — session 1 (drafting)
