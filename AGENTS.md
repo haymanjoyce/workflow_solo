@@ -38,6 +38,17 @@ from the human, and does not itself edit files that task covers. If
 your tool cannot start such a subagent, tell the human to open a new
 session instead.
 
+## Reviewer
+A reviewer is a session the human starts before ticking a feature
+spec's Done-when. It does no Plan task. It reads the spec, the diff of
+the spec's commits and the Session log, then appends one log entry
+with every field of specs/TEMPLATE.md's log block. Under its Did line
+it lists one line per Done-when item: the item, a verdict of met, not
+met or cannot tell, and the evidence. If its own model appears on any
+implementing session's Agent/tool line, it says so and stops. It edits
+no other file, ticks nothing, and commits only that entry, with the
+message "<spec-name>: review".
+
 ## What you may never edit
 One exception: the Scribe section below. It never covers Done-when
 checkboxes.
