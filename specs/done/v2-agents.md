@@ -169,3 +169,5 @@ Did: noted, at the human's request, that scratch commit fbea2d0 moved scratch-up
 Checks run: in scratch, `git show --stat fbea2d0`, `cat specs/_active.md`, `git ls-files tests`.
 Left: Done-when for the human, after the review gate.
 PROPOSAL (if any): none.
+
+Waiver (human, 2026-10-07): Done-when ticked without a cross-model review — no second model used; the rules are markdown and were checked by the scratch trial.
