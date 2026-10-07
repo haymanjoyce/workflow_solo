@@ -24,6 +24,20 @@ repo is the system.
    behaviour to its working/documented state. If the fix requires new
    behaviour, stop and tell the human it needs a feature spec.
 
+## Dispatch
+A session may hand the next Plan task to a fresh session as RULES.md
+defines it. The dispatch prompt is the text below, verbatim, with
+nothing added or removed:
+
+    You are a dispatched session. Follow AGENTS.md in this repo; it
+    governs your behaviour here. Implement the next unchecked Plan task
+    of the spec named in specs/_active.md, and nothing else.
+
+A dispatching session dispatches at most one Plan task per instruction
+from the human, and does not itself edit files that task covers. If
+your tool cannot start such a subagent, tell the human to open a new
+session instead.
+
 ## What you may never edit
 One exception: the Scribe section below. It never covers Done-when
 checkboxes.
@@ -67,7 +81,8 @@ You may tick a Plan task checkbox only when ALL of:
   (or the log states explicitly why none applies);
 - you have appended a Session log entry with every field of
   specs/TEMPLATE.md's log block, one line each: Agent/tool, Did,
-  Checks run, Left, PROPOSAL.
+  Checks run, Left, PROPOSAL. A dispatched session's Agent/tool line
+  also names the dispatch mechanism and its own model.
 Then commit per the Git rules below.
 
 ## Git rules
