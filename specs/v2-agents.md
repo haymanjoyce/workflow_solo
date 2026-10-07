@@ -70,7 +70,7 @@ with a reason.
 - [x] task 1 — RULES.md and AGENTS.md: definition of a fresh session,
       the fixed dispatch prompt, and the one-task-per-instruction
       limit on dispatchers
-- [ ] task 2 — reviewer role in AGENTS.md; the review-before-tick gate,
+- [x] task 2 — reviewer role in AGENTS.md; the review-before-tick gate,
       the waiver and the hotfix exemption in RULES.md's closing rule;
       the rationale in NOTES.md
 - [ ] task 3 — trial in a throwaway: one dispatched task and one
@@ -148,3 +148,10 @@ Did: task 1 — RULES.md gains "Sessions and dispatch" (fresh session as a new s
 Checks run: `git diff` (RULES.md, this spec only; AGENTS.md in the preceding scribe commit); `grep -n -i "dispatch" RULES.md AGENTS.md`; Commands block unset, markdown-only repo, no test applies to governance prose.
 Left: tasks 2 and 3; README.md "Pointing an agent at the workflow" is in scope but not named by task 1, so it is unchanged.
 PROPOSAL (if any): none.
+
+### 2026-10-07 — session 4
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 2 — RULES.md "Closing a spec" gains the review gate (feature specs tick Done-when only after a review entry from a model on no implementing Agent/tool line, or a one-line logged waiver with reason; hotfix specs exempt); NOTES.md gains rationale for dispatch and for the review gate; scribe commit first: AGENTS.md gains a Reviewer section (authorised: "i authorise you to scribe").
+Checks run: `git diff` (RULES.md, NOTES.md, this spec; AGENTS.md in the preceding scribe commit); `grep -n -i -E "review|waiver|hotfix specs" RULES.md AGENTS.md`; Commands block unset, markdown-only repo, no test applies to governance prose.
+Left: task 3; README.md "Pointing an agent at the workflow" still unchanged, named by no task.
+PROPOSAL (if any): none. Noted for the human: the Reviewer section's per-item verdict lines under Did, and its "<spec-name>: review" commit message, are exceptions to the one-line log format and the Git rules' commit kinds, both shown and authorised before writing.

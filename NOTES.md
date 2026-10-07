@@ -55,6 +55,22 @@ requirement in AGENTS.md's completion rule is what makes a ticked task
 mean something. The log's Agent/tool line lets a later reader attribute
 a result to a model; the fire drill depends on it.
 
+## Dispatch keeps the human between tasks
+A dispatched subagent gives the clean context of a new session without
+the human closing and opening one. The prompt is fixed and content-free
+so the task still travels through the repo, not through a message
+between agents. One dispatch per instruction keeps the human the only
+durable process: a dispatcher that chained tasks would be an
+orchestrator nobody reviews between steps.
+
+## A second model reads before the human ticks
+A model checking its own work shares its own blind spots, so the review
+needs a model that did none of the implementing. The verdict informs
+the tick and never replaces it: acceptance stays the human's. The
+waiver exists because a second model is not always to hand, and a gate
+with no logged way round invites a quiet one. Hotfixes are exempt
+because their approval is meant to take minutes.
+
 ## Terse logs
 The human reviews the diff plus the log's claims, so the log has to be
 quick to check. Five one-line fields scan in seconds, and fixed fields

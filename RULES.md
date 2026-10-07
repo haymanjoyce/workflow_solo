@@ -65,6 +65,11 @@ files the subagent's task covers.
   log a week of entries.
 
 ## Closing a spec
+On a feature spec, the human ticks Done-when only after its Session log
+holds a review entry (reviewer role: AGENTS.md) whose Agent/tool line
+names a model that appears on no implementing session's Agent/tool
+line, or after appending a one-line waiver, with its reason, to the
+Session log. This review gate does not apply to hotfix specs.
 The human ticks every Done-when box against observed behaviour, sets
 Status: done, moves the file to specs/done/ (hotfixes too) and sets
 _active.md to none or the queued next spec. Durable commands and
