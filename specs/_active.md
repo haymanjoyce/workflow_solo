@@ -1,3 +1,3 @@
-active: specs/v2-agents.md
+active: none
 hotfix: none
 
