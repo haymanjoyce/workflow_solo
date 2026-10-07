@@ -47,6 +47,14 @@ hotfix is in play. It restores existing behaviour to its working or
 documented state, with no new capability, interface change or scope;
 new behaviour needs a queued feature spec (agent side: AGENTS.md).
 
+## Sessions and dispatch
+A fresh session is either a new session or a subagent whose context
+holds none of the dispatching session's conversation, given only the
+dispatch prompt held in AGENTS.md. Which tool feature provides it is
+not part of the workflow. A dispatching session dispatches at most one
+Plan task per instruction from the human, and does not itself edit
+files the subagent's task covers.
+
 ## Git, review and size
 - The human's spec and doc edits are their own commits.
 - Main-only is fine until a hotfix must land mid-feature. Then the

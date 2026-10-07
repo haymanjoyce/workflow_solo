@@ -67,7 +67,7 @@ with a reason.
   throwaway, and its evidence stays outside the template.
 
 ## Plan                 <!-- human edits; agents propose via log -->
-- [ ] task 1 — RULES.md and AGENTS.md: definition of a fresh session,
+- [x] task 1 — RULES.md and AGENTS.md: definition of a fresh session,
       the fixed dispatch prompt, and the one-task-per-instruction
       limit on dispatchers
 - [ ] task 2 — reviewer role in AGENTS.md; the review-before-tick gate,
@@ -141,3 +141,10 @@ before run 2.
 Checks run: none — markdown-only repo, Commands block unset.
 Left: everything; the spec is unapproved.
 PROPOSAL (if any): none open.
+
+### 2026-10-07 — session 3
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 1 — RULES.md gains "Sessions and dispatch" (fresh session as a new session or a clean-context subagent given only the dispatch prompt, no vendor mechanism named; one Plan task per human instruction; dispatcher edits none of the task's files); scribe commit first: AGENTS.md gains a Dispatch section holding the fixed, content-free dispatch prompt, and the completion rule has a dispatched session's Agent/tool line name the mechanism and its model (Done-when item 4, named by no task, placed here as dispatch work) (authorised: "i authorise that change").
+Checks run: `git diff` (RULES.md, this spec only; AGENTS.md in the preceding scribe commit); `grep -n -i "dispatch" RULES.md AGENTS.md`; Commands block unset, markdown-only repo, no test applies to governance prose.
+Left: tasks 2 and 3; README.md "Pointing an agent at the workflow" is in scope but not named by task 1, so it is unchanged.
+PROPOSAL (if any): none.
