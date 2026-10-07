@@ -1,5 +1,6 @@
 # Rules — spec-driven solo workflow
-Version: 1.0 · Status: approved
+Template version: 2 · Status: approved
+(What changes the version, and what certifies it: docs/commissioning.md.)
 
 These rules and AGENTS.md bind every agent here; agents follow AGENTS.md
 as written, and neither file restates the other. No vendor tool, memory
@@ -77,7 +78,8 @@ conventions go to AGENTS.md, product truths to docs/product.md. Nothing
 durable stays only in a done spec; finished work never stays active.
 
 ## Commissioning, drills and templates
-Commissioning is required before the real product starts, and the fire
-drill recurs after it: both are the human's procedures, held in
-docs/commissioning.md. Feature specs follow specs/TEMPLATE.md; hotfix
-specs follow specs/TEMPLATE-hotfix.md.
+Before the real product starts, a project is commissioned or inherits
+its template version's certification, and the fire drill recurs after
+it: all are the human's procedures, held in docs/commissioning.md.
+Feature specs follow specs/TEMPLATE.md; hotfix specs follow
+specs/TEMPLATE-hotfix.md.

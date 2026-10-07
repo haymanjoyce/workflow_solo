@@ -96,6 +96,30 @@ commit. That is why granularity is a rule, not a preference.
 A stale pointer in _active.md is an open invitation for the next session
 to keep coding. Hence finished work never stays in the active slot.
 
+## Certify the template once, drill each product
+v1 commissioned every project in full, with refusal tests run by hand,
+and asked for two products before the loop counted as real. That cost
+was paid again in every child, though the rules under test were the
+template's and unchanged. So the template is proven per version: one
+full loop shows the rules hold together end to end, and that needs one
+product, not two, since the loop tests the rules rather than the agent.
+What does vary by product is whether the agent obeys, so each product
+gets its own drill. A child made from a certified version, worked by a
+certified product, with AGENTS.md changed only in its Commands, is
+running the rules that were proven; it runs the drill once to show the
+product still behaves in its repo, and skips the loop.
+
+## Why the drill script lives outside
+A script that judges pass or fail encodes each test's expected outcome.
+In the template it would ship into every child, where any session could
+read it, and a session that knows the answer cannot be tested blind.
+Keeping it outside costs the template a self-contained record, so each
+drill row cites the script's commit hash and stays checkable. The
+script judges from repo state, not from what the session says, because
+an agent can refuse in words and edit anyway. The manual drill exists
+because a script needs an adapter for each product, and a product
+without one must still be certifiable.
+
 ## Why the drill recurs
 Instruction-following degrades: models change, AGENTS.md grows, sessions
 get lazy about reading. Commissioning proves day zero, not forever.

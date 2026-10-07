@@ -89,7 +89,7 @@ four tests exists for products the script cannot drive yet.
   the first certification of the finished v2 template.
 
 ## Plan                 <!-- human edits; agents propose via log -->
-- [ ] task 1 — docs/commissioning.md: version bump rule; the full loop;
+- [x] task 1 — docs/commissioning.md: version bump rule; the full loop;
       the certification bar (one product); inheritance conditions; the
       child's drill replacing full commissioning; the manual drill.
       RULES.md: version line and pointer. Rationale to NOTES.md
@@ -179,3 +179,10 @@ v2-structure's decision that these procedures are human-only.
 Checks run: none — markdown-only repo, Commands block unset.
 Left: everything; the spec is unapproved.
 PROPOSAL (if any): none open.
+
+### 2026-10-07 — session 3
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 1 — docs/commissioning.md rewritten: Template versions (bump list), Certification (one product; loop row any product + drill row per product; drill rows cite script hash; notes-location rule extended to the script), Starting a project from the template (version recorded by the copied RULES.md line; three inheritance conditions; inheriting child drills once before first real spec approval, else full loop + drill), Full loop (refusal tests removed; step-5 checks on every task; closes via review gate), Fire drill (scripted line format; manual A, D, B, C steps judged from git state), Build checklist (two-product item replaced by one certified pair); RULES.md version line set to "Template version: 2" with pointer, and the commissioning pointer now covers inheritance; NOTES.md gains two rationale sections.
+Checks run: `git diff` (RULES.md, NOTES.md, docs/commissioning.md, this spec); `grep -rniE "two (different )?(agents|products)|twice" --exclude-dir=.git --exclude-dir=done .` (only hits: this spec and NOTES.md's history of v1); Commands block unset, markdown-only repo, no test applies to governance prose.
+Left: tasks 2–5; README.md "Starting a new project" and "Keeping it honest" are in scope but named by no task, so unchanged (the latter still says "one fresh session").
+PROPOSAL (if any): none. Noted for the human: (1) version numbered "2", whole numbers, a choice of mine — the spec names no format; (2) a non-inheriting child's own full-loop result has no named table (Done-when 4 gives "Project drills" drill lines only) — task 2 may need a decision; (3) the manual drill states pass criteria in this tracked file, as v1 did; Done-when item 10 is read as covering the script's criteria only.
