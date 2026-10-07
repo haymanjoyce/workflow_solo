@@ -73,7 +73,7 @@ with a reason.
 - [x] task 2 — reviewer role in AGENTS.md; the review-before-tick gate,
       the waiver and the hotfix exemption in RULES.md's closing rule;
       the rationale in NOTES.md
-- [ ] task 3 — trial in a throwaway: one dispatched task and one
+- [x] task 3 — trial in a throwaway: one dispatched task and one
       cross-model review against a scratch spec. Report in this log
 
 ## Session log          <!-- agents append; human may annotate -->
@@ -155,3 +155,10 @@ Did: task 2 — RULES.md "Closing a spec" gains the review gate (feature specs t
 Checks run: `git diff` (RULES.md, NOTES.md, this spec; AGENTS.md in the preceding scribe commit); `grep -n -i -E "review|waiver|hotfix specs" RULES.md AGENTS.md`; Commands block unset, markdown-only repo, no test applies to governance prose.
 Left: task 3; README.md "Pointing an agent at the workflow" still unchanged, named by no task.
 PROPOSAL (if any): none. Noted for the human: the Reviewer section's per-item verdict lines under Did, and its "<spec-name>: review" commit message, are exceptions to the one-line log format and the Git rules' commit kinds, both shown and authorised before writing.
+
+### 2026-10-07 — session 5
+Agent/tool: Claude Code (Opus 5.5)
+Did: task 3 — report on the trial the human ran in the throwaway haymanjoyce/scratch (made from this template at de5539a; RULES.md, NOTES.md, README.md identical, AGENTS.md identical but for its filled Commands block) against scratch spec scratch-upper. Dispatch: both Plan tasks (commits 2df17ee, b51d0a2) were done by sessions whose Agent/tool line reads "Grok Build subagent, dispatched with the AGENTS.md dispatch prompt (model: Grok)", one task each. Review: commit 2925603 "scratch-upper: review" adds only the review entry; its Agent/tool line is Codex (GPT-6), a model on no implementing line; it gives one verdict with evidence per Done-when item: met, met, cannot tell. The "cannot tell" is the unittest item: the reviewer ran it in PowerShell, where `python` was unavailable, rather than translating to the Commands block's bash as AGENTS.md's Commands section directs. I reran it in Git Bash: 2 tests, OK. The human then ticked all three boxes (5034d71), which the gate permits, since the review is a precondition, not acceptance.
+Checks run: in scratch, `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests` (Git Bash; Ran 2 tests, OK); `git log` and `git show` on the scratch commits above; `diff` of scratch's rule files against this repo's. Here: Commands block unset, markdown-only repo, no test applies to a trial report.
+Left: Done-when for the human, after the review gate. Observations from the trial, none a v2-agents fault: (1) the repo holds only the dispatched sessions' own claims that the prompt was verbatim and the context clean, and no entry from the dispatching session; (2) scratch-upper's closure is partial: Status is done, but the file is not in specs/done/ and _active.md still names it; (3) the closing commit tracked tests/__pycache__/*.pyc, as the template's .gitignore leaves language ignores to commissioning; (4) a throwaway made from this template carries this repo's own specs (v2-agents, v2-commissioning, specs/done/*), which concerns v2-commissioning.
+PROPOSAL (if any): none.
