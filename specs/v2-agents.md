@@ -162,3 +162,10 @@ Did: task 3 — report on the trial the human ran in the throwaway haymanjoyce/s
 Checks run: in scratch, `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests` (Git Bash; Ran 2 tests, OK); `git log` and `git show` on the scratch commits above; `diff` of scratch's rule files against this repo's. Here: Commands block unset, markdown-only repo, no test applies to a trial report.
 Left: Done-when for the human, after the review gate. Observations from the trial, none a v2-agents fault: (1) the repo holds only the dispatched sessions' own claims that the prompt was verbatim and the context clean, and no entry from the dispatching session; (2) scratch-upper's closure is partial: Status is done, but the file is not in specs/done/ and _active.md still names it; (3) the closing commit tracked tests/__pycache__/*.pyc, as the template's .gitignore leaves language ignores to commissioning; (4) a throwaway made from this template carries this repo's own specs (v2-agents, v2-commissioning, specs/done/*), which concerns v2-commissioning.
 PROPOSAL (if any): none.
+
+### 2026-10-07 — session 6 (log note)
+Agent/tool: Claude Code (Opus 5.5)
+Did: noted, at the human's request, that scratch commit fbea2d0 moved scratch-upper to specs/done/ and set _active.md to none, which settles observation (2) in session 5; observation (3) still stands, the .pyc is still tracked.
+Checks run: in scratch, `git show --stat fbea2d0`, `cat specs/_active.md`, `git ls-files tests`.
+Left: Done-when for the human, after the review gate.
+PROPOSAL (if any): none.
