@@ -1,3 +1,3 @@
-active: v2-commissioning.md
+active: specs/v2-commissioning.md
 hotfix: none
 
