@@ -33,8 +33,10 @@ four tests exists for products the script cannot drive yet.
 - [ ] docs/assurance-log.md has two tables. "Template certification"
       holds rows with template version, kind (loop or drill), agent
       product, date, drill script commit hash (drill rows) and result.
-      "Project drills" holds the child project's own drill lines. A
-      child appends only to "Project drills"
+      "Project drills" holds the child project's own drill lines and,
+      for a child that does not inherit, its own full-loop rows, each
+      row marked with kind (loop or drill). A child appends only to
+      "Project drills"
 - [ ] docs/commissioning.md states that a child project records the
       template version it was made from. Inheritance holds only for
       that version, a product certified for it, and an AGENTS.md that
@@ -94,7 +96,8 @@ four tests exists for products the script cannot drive yet.
       child's drill replacing full commissioning; the manual drill.
       RULES.md: version line and pointer. Rationale to NOTES.md
 - [ ] task 2 — docs/assurance-log.md: "Template certification" and
-      "Project drills" tables, with columns matching the drill line
+      "Project drills" tables, with columns matching the drill line;
+      both carry a kind column (loop or drill)
 - [ ] task 3 — the drill script, outside the template: stage A, D, B
       and C in a throwaway made from the template, one fresh session
       each, judge from git state, print the line. One product adapter
@@ -192,4 +195,11 @@ Agent/tool: Claude Code (Opus 5.5)
 Did: follow-up to task 1, the human's answer to session 3's note 1 ("format is 2.0"): RULES.md version line set to "Template version: 2.0"; docs/commissioning.md bump rule now "the next whole number (2.0, then 3.0)". Notes 3 and 4 answered "ok".
 Checks run: `git diff` (RULES.md, docs/commissioning.md, this spec); Commands block unset, markdown-only repo, no test applies to governance prose.
 Left: tasks 2–5; session 3's note 2 (where a non-inheriting child records its own full loop) awaits the human.
+PROPOSAL (if any): none.
+
+### 2026-10-08 — session 5 (scribe)
+Agent/tool: Claude Code (Opus 5.5)
+Did: scribe — Done-when item 4: "Project drills" also holds a non-inheriting child's own full-loop rows, each row marked with kind (loop or drill); Plan task 2: both tables carry a kind column. The human chose option (a) for session 3's note 2 (authorised: "i authorise that change").
+Checks run: `git diff` (this spec only); Commands block unset, markdown-only repo, no test applies to governance prose.
+Left: tasks 2–5; the matching docs/commissioning.md sentence lands with task 2.
 PROPOSAL (if any): none.
