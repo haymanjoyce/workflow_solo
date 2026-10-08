@@ -6,7 +6,7 @@ here. No agent reading list names this file.
 ## Template versions
 
 RULES.md's Template version line names the template version. These
-changes require a new version, numbered one above the last:
+changes require a new version, the next whole number (2.0, then 3.0):
 - any change to RULES.md;
 - any change to AGENTS.md outside the Commands block;
 - any change to specs/TEMPLATE.md or specs/TEMPLATE-hotfix.md;

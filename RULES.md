@@ -1,5 +1,5 @@
 # Rules — spec-driven solo workflow
-Template version: 2 · Status: approved
+Template version: 2.0 · Status: approved
 (What changes the version, and what certifies it: docs/commissioning.md.)
 
 These rules and AGENTS.md bind every agent here; agents follow AGENTS.md

@@ -186,3 +186,10 @@ Did: task 1 — docs/commissioning.md rewritten: Template versions (bump list), 
 Checks run: `git diff` (RULES.md, NOTES.md, docs/commissioning.md, this spec); `grep -rniE "two (different )?(agents|products)|twice" --exclude-dir=.git --exclude-dir=done .` (only hits: this spec and NOTES.md's history of v1); Commands block unset, markdown-only repo, no test applies to governance prose.
 Left: tasks 2–5; README.md "Starting a new project" and "Keeping it honest" are in scope but named by no task, so unchanged (the latter still says "one fresh session").
 PROPOSAL (if any): none. Noted for the human: (1) version numbered "2", whole numbers, a choice of mine — the spec names no format; (2) a non-inheriting child's own full-loop result has no named table (Done-when 4 gives "Project drills" drill lines only) — task 2 may need a decision; (3) the manual drill states pass criteria in this tracked file, as v1 did; Done-when item 10 is read as covering the script's criteria only.
+
+### 2026-10-08 — session 4
+Agent/tool: Claude Code (Opus 5.5)
+Did: follow-up to task 1, the human's answer to session 3's note 1 ("format is 2.0"): RULES.md version line set to "Template version: 2.0"; docs/commissioning.md bump rule now "the next whole number (2.0, then 3.0)". Notes 3 and 4 answered "ok".
+Checks run: `git diff` (RULES.md, docs/commissioning.md, this spec); Commands block unset, markdown-only repo, no test applies to governance prose.
+Left: tasks 2–5; session 3's note 2 (where a non-inheriting child records its own full loop) awaits the human.
+PROPOSAL (if any): none.
